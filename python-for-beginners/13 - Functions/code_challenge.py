@@ -1,17 +1,20 @@
-# Create a calculator function
-# The function should accept three parameters:
-# first_number: a numeric value for the math operation
-# second_number: a numeric value for the math operation
-# operation: the word 'add' or 'subtract'
-# the function should return the result of the two numbers added or subtracted
-# based on the value passed in for the operator
-#
-# Test your function with the values 6,4, add 
-# Should return 10
-#
-# Test your function with the values 6,4, subtract 
-# Should return 2
-# 
-# BONUS: Test your function with the values 6, 4 and divide 
-# Have your function return an error message when invalid values are received
+def calculator():
+    add_subtract = input('add or substract? ')
+    
+    try:
+        first_number = int(input('Type in first number here: '))
+        second_number = int(input('Type in second number here: '))
+    except ValueError:
+        print('Invalid Values, please try again')
+    
+    result_add = first_number + second_number
+    result_subtract = first_number - second_number
+    if add_subtract == 'add':
+        print(f'Answer = {result_add}')
+    elif add_subtract == 'subtract':
+        print(f'Answer = {result_subtract}')
+    else:
+        print('Please try again')
+calculator()
+
 
